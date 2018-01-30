@@ -1,0 +1,639 @@
+$fontOpen: 'Open Sans', sans-serif;
+$buttonColor: #00a407;
+$fontProx: 'Proxima Nova', sans-serif;
+$redColor: #a51741;
+$darkGrey: #333333;
+
+@font-face{
+    font-family: "Proxima Nova";
+    src : url("../fonts/ProximaNova/ProximaNova-Black.ttf");
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: grey;
+}
+
+header{
+	padding-top: 14px;
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+	background-position: center center;
+	.wrapper{
+		position: relative;
+	}
+}
+
+.button{
+	cursor: pointer;
+	width: 240px;
+	height: 50px;
+	background: linear-gradient(to bottom, #01af09 0%,#008b02 100%);
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.56);
+	border-radius: 50px;
+	border: none;
+	color: #fff;
+	outline: none;
+}
+
+.wrapper{
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 15px;
+}
+
+.sprite{
+	content: '';
+	display: block;
+	background-image: url('../images/sprite.png');
+}
+
+.logo{
+	display: block;
+	&::before{
+		content: '';
+		background-image: url('../images/logo.png');
+		width: 230px;
+		height: 77px;
+		display: block;
+	}
+}
+
+.advantages_block{
+	color: #fff;
+	margin-top: 36px;
+}
+
+.advantages_title{
+	font-family: $fontProx;
+	font-size: 36px;
+}
+
+.advantages_list{
+	margin-top: 30px;
+	list-style-type: none;
+	padding-left: 40px;
+	font-size: 16px;
+	font-family: $fontOpen;
+	font-weight: 600;
+	.advantage{
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		&::before{
+			@extend .sprite;
+			width: 33px;
+			height: 33px;
+			background-position: -152px 0;
+			margin-right: 20px;
+		}
+	}
+}
+
+.trade_block{
+	padding: 22px 20px 50px;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	background-color: rgba(0,0,0,.75);
+	height: 100%;
+}
+
+.trade_title{
+	font-size: 36px;
+	font-family: $fontOpen;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.trade_description{
+	font-family: $fontOpen;
+	font-weight: 800;
+	font-size: 20px;
+}
+
+.trade_img{
+	display: block;
+	margin: auto;
+	padding: 30px;
+	&::before{
+		@extend .sprite;
+		width: 142px;
+		height: 142px;
+		margin: auto;
+	}
+}
+
+.button_start_trade{
+	.button_main_text, .button_description{
+		text-align: center;
+		display: block;
+		color: #fff;
+		font-weight: 800;
+		font-family: $fontOpen;
+	}
+	.button_main_text{
+		font-size: 20px;
+	}
+	.button_description{
+		font-size: 12px;
+	}
+}
+
+.header_bottom{
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.sponsors_image{
+	img{
+		width: 80%;
+	}
+}
+
+.call{
+	position: absolute;
+	width: 74px;
+	height: 74px;
+	bottom: 20px;
+	right: 20px;
+}
+
+.call_back{
+	position: absolute;
+	margin: auto;
+	background: linear-gradient(to bottom, #af0011 0%,#a51741 100%);
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+.call_center{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: linear-gradient(to bottom, #af0011 0%,#a51741 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::before{
+		@extend .sprite;
+		width: 28px;
+		height: 28px;
+		background-position: -195px 0;
+	}
+}
+
+.sprite_add_image{
+	content: '';
+	background-image: url("../images/sprite2.png");
+	display: block;
+}
+
+.account{
+	padding: 55px 0;
+	background-color: #fff;
+}
+
+.account_block{
+	margin: 50px 0;
+	text-align: center;
+}
+
+.account_image{
+	margin: auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 2px solid $redColor;
+	background-color: #fff;
+	margin-bottom: 40px;
+	box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.56); 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::before{
+		@extend .sprite_add_image;
+	}
+}
+
+.account_description{
+	color: $darkGrey;
+	font-family: $fontOpen;
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.56); 
+}
+
+.time{
+	.account_image{
+		&::before{
+			width: 74px;
+			height: 79px;
+		}
+	}
+}
+
+.level{
+	.account_image{
+		&::before{
+			width: 82px;
+			height: 75px;
+			background-position: -95px 0;
+		}
+	}
+}
+
+.concurent{
+	.account_image{
+		&::before{
+			width: 74px;
+			height: 73px;
+			background-position: -190px 0;
+		}
+	}
+}
+
+.safety{
+	.account_image{
+		&::before{
+			width: 62px;
+			height: 75px;
+			background-position: -280px 0;
+		}
+	}
+}
+
+.open_account{
+	margin: auto;
+	display: block;
+	font-family: $fontOpen;
+	font-size: 25px;
+	font-weight: 600;	
+}
+
+.sirix{
+	background-color: #fff;
+	background-image: url("../images/back.png");
+	background-position: center center;
+	background-size: cover;
+	padding-top: 30px;
+}
+
+.sirix_info{
+	padding-top: 50px;
+}
+
+.sirix_head{
+	display: flex;
+	padding-bottom: 40px;
+}
+
+.sirix_title{
+	font-size: 24px;
+	font-family: $fontOpen;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-left: 15px;
+}
+
+.sirix_logo{
+	&::before{
+		content: '';
+		display: block;
+		background-image: url("../images/sirix_logo.png");
+		width: 118px;
+		height: 40px;
+	}
+}
+
+.sirix_list{
+	list-style-type: none;
+	.sirix_adv{
+		font-size: 18px;
+		font-family: $fontOpen;
+		font-weight: 500;
+		margin-bottom: 15px;
+	}
+}
+
+.sirix_image{
+	max-width: 544px;
+	margin: auto;
+	img{
+		width: 100%;
+	}
+}
+
+.items{
+	padding: 25px 0;
+	background-image: url("../images/back02.jpg");
+	background-position: center center;
+	background-size: cover;
+	color: #fff;
+}
+
+.item_block{
+	margin-bottom: 30px;
+}
+
+.item_image{
+	margin-bottom: 3px;
+	height: 62px;
+	&::before{
+		@extend .sprite_add_image;
+	}
+}
+
+.regulator{
+	.item_image{
+		&::before{
+			width: 61px;
+			height: 62px;
+			background-position: 0 -90px;
+		}
+	}
+}
+
+.generator{
+	.item_image{
+		&::before{
+			width: 54px;
+			height: 62px;
+			background-position: -80px -90px;
+		}
+	}
+}
+
+.insurance{
+	.item_image{
+		&::before{
+			width: 62px;
+			height: 43px;
+			background-position: -150px -90px;
+		}
+	}
+}
+
+.balance{
+	.item_image{
+		&::before{
+			width: 54px;
+			height: 49px;
+			background-position: -225px -90px;
+		}
+	}
+}
+
+.item_title{
+	font-size: 24px;
+	font-family: $fontOpen;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.item_description{
+	font-size: 18px;
+	font-family: $fontOpen;
+	font-weight: 500;
+}
+
+.awards{
+	padding: 40px 0 20px;
+	background-color: #fff;
+}
+
+.award_block{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.award_title{
+	text-transform: uppercase;
+	color: $darkGrey;
+	font-family: $fontOpen;
+	font-size: 18px;
+	font-weight: 600;
+	text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.56);
+}
+
+.award_description{
+	color: $darkGrey;
+	font-family: $fontOpen;
+	font-size: 14px;
+	font-weight: 600;
+	text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.56);
+}
+
+footer{
+	background-image: url("../images/back02.jpg");
+	background-position: center center;
+	background-size: cover;
+	padding: 40px 0 20px;
+}
+
+.sponsors{
+	img{
+		width: 100%;
+	}
+}
+
+.footer_button{
+	margin: 20px auto;
+	display: block;
+	font-family: $fontOpen;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.footer_info{
+	font-family: $fontOpen;
+	font-size: 14px;
+	color: #838383;
+	font-weight: 500;
+	margin-top: 25px;
+	text-align: center;
+	&::before{
+		content: '';
+		background-color: #838383;
+		width: 100%;
+		height: 2px;
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+
+.register_place{
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	background-color: rgba(0,0,0,0.8);
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+.register_window{
+	width: 80%;
+	max-width: 350px;
+	background-color: #fff;
+	height: auto;
+	padding: 15px;
+	position: relative;
+	top: 25%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.text{
+	display: block;
+	font-family: $fontOpen;
+	font-size: 18px;
+}
+
+.field{
+	background-color: #d4d4d4;
+	border: none;
+	height: 30px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.register_button{
+	display: block;
+	margin: auto;
+	font-family: $fontOpen;
+	font-size: 20px;
+}
+
+.close_button{
+	font-family: $fontOpen;
+	font-size: 20px;
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	cursor: pointer;
+	outline: none;
+}
+
+.form_input_block{
+	position: relative;
+}
+
+.fill_field{
+	margin-bottom: 10px;
+	color: red;
+	font-family: $fontOpen;
+	font-size: 10px;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	max-width: 150px;
+	display: none;
+}
+
+@media(min-width: 640px){
+	.main_header_block{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.trade_block{
+		max-width: 365px;
+	}
+
+	.account_info{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.account_block{
+		width: 50%;
+	}
+
+	.items{
+		.wrapper{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+
+	.item_block{
+		width: 45%;
+	}
+
+	.awards{
+		.wrapper{
+			display: flex;
+			justify-content: space-around;
+		}
+	}
+
+	.award_block{
+		img{
+			height: 190px;
+		}
+	}
+}
+
+@media(min-width: 960px){
+	.advantages_title{
+		font-size: 83px;
+	}
+
+	.advantages_list{
+		.advantage{
+			font-size: 24px;
+		}
+	}
+
+	.account_info{
+		justify-content: space-around;
+	}
+
+	.account_block{
+		width: 23%;
+	}
+
+	.sirix{
+		.wrapper{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.head_of_footer{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.sponsors{
+			width: 70%;
+		}
+		.footer_button{
+			margin: auto 0; 
+		}
+	}
+}
+
+@media(min-width: 1200px){
+	.advantages_block{
+		margin-left: 60px;
+	}
+}
